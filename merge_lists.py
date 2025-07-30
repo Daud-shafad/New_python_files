@@ -1,0 +1,7 @@
+#Write code to merge two lists and then remove duplicates from the result.
+
+list1 = [0,1,2,3,4,5]
+list2 = [5,6,7,8,9]
+list3 = list1 + list2
+list3.pop(6)
+print(list3)
