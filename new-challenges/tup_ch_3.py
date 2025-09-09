@@ -1,0 +1,10 @@
+# Create a tuple with 3 animals. Try to change one value and see what happens.
+animals = ("tiger", "lion", "elephant")
+animals.remove("tiger")
+print(animals)
+
+# print(animals[1], "cheetah")
+# if i write this it shows me "lion" "cheetah", so, why it shows me this
+#but explain it these things
+
+#AttributeError: 'tuple' object has no attribute 'append, remove, insert,'
