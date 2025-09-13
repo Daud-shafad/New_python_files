@@ -11,7 +11,6 @@
 user_number = int(input("Enter a number: "))
 
 is_even = user_number % 2 == 0
-print(is_even)
 
 if user_number % 2 == 0:
     print("Even")

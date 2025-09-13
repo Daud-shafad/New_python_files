@@ -15,10 +15,7 @@ usr_pass_dict = {"daud" : "dd123", "muwahib" : "muw123", "maymuna" : "m8910", "u
 user_name = input("Enter a username: ").lower()
 user_pass = input("Enter a password: ").lower()
 
-if user_name in usr_pass_dict.keys() and usr_pass_dict[user_name] == user_pass:
+if user_name == usr_pass_dict.keys() and user_pass == usr_pass_dict.values():
     print("Login successful")
 else:
-    print("Invalid username or password")
-
-    
-    
+    print("Invalid username or password") 

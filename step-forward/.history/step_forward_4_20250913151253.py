@@ -10,13 +10,14 @@
 
 user_number = int(input("Enter a number: "))
 
-is_even = user_number % 2 == 0
-print(is_even)
-
 if user_number % 2 == 0:
     print("Even")
 else:
     print("Odd")
 
+is_even = user_number % 2 == 0
 
-
+if is_even:
+    print("Yes")
+else:
+    print("No")

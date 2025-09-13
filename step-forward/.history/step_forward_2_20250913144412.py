@@ -16,8 +16,6 @@
 
 user_grade = int(input("Enter a number between 0 - 100: "))
 
-grade = None
-
 match user_grade:
     case usrg if 90 <= usrg <= 100:
         grade = "A"
