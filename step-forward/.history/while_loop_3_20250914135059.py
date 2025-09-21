@@ -1,0 +1,14 @@
+# Challenge 3: Count Up
+
+# Start from 1.
+
+# Use a while loop to print numbers until 10.
+
+# Stop when 10 is printed.
+
+count = 0
+
+while count < 10:
+    count += 1
+    print(count)
+    break
