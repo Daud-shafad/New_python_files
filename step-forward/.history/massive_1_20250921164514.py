@@ -19,27 +19,23 @@ total = 0.0
 
 while True:
     customer_item = input("Enter an item name 'type 'stop' to finish': ")
+    customer_cost = int(input("Enter the cost of the item: "))
     if customer_item == "stop":
         break
-    
-    customer_cost = float(input("Enter the cost of the item: "))
-  
-    expenses_dict[customer_item] = customer_cost
-    expenses_list.append(customer_cost)
-    expenses_unique_set_items.add(customer_item)
-     
-    total = total + customer_cost
-    
-    if customer_cost > 100:
-      print("High expenses")
     else:
-      print("Low expenses")
-
-average = total / len(expenses_list)
-
-print(total)
-print(average)
-print(tuple(expenses_dict.keys()))
-print(expenses_unique_set_items)
+     expenses_dict[customer_item] = customer_cost
+     expenses_list.append(customer_cost)
+     expenses_unique_set_items.add(customer_cost)
+     customer_cost = float(customer_cost)
+     total = total + customer_cost
     
+    if total > 100:
+        print("High expenses")
+    else:
+        print("Low expenses")
+    average = total / len(expenses_list)
+    print(total)
+    print(average)
+    print(tuple(expenses_dict.keys()))
+    print(expenses_unique_set_items)
     

@@ -26,20 +26,18 @@ while True:
   
     expenses_dict[customer_item] = customer_cost
     expenses_list.append(customer_cost)
-    expenses_unique_set_items.add(customer_item)
+    expenses_unique_set_items.add(customer_cost)
      
     total = total + customer_cost
     
-    if customer_cost > 100:
-      print("High expenses")
+    if total > 100:
+        print("High expenses")
     else:
-      print("Low expenses")
+        print("Low expenses")
 
 average = total / len(expenses_list)
-
 print(total)
 print(average)
 print(tuple(expenses_dict.keys()))
 print(expenses_unique_set_items)
-    
     
