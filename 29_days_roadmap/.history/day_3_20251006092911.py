@@ -29,19 +29,21 @@
 stud_data_dict = {}
 
 entry_password = "admin123"
-user_password = input("Enter the password: ").lower()
 
-if user_password != entry_password:
-       print("Wrong password, start it again")
-else:
-
- while True:
+while True:
     
-    print("\n1. Add Student")
-    print("2. Add Grade")
-    print("3. View Grades")
-    print("4. View All Students")
-    print("5. Exit")
+    
+    user_password = input("Enter the password: ").lower()
+    if user_password != entry_password:
+       print("Wrong password")
+       break
+   
+    else:
+     print("\n1. Add Student")
+     print("2. Add Grade")
+     print("3. View Grades")
+     print("4. View All Students")
+     print("5. Exit")
     
     user_choice = input("Enter a number between 1-5: ")
     
