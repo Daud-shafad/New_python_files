@@ -51,7 +51,7 @@ while True:
                      new_qty = current_quantity - sold_quantity
                      inventory_dict[item_id][1] = new_qty
                      print("Sale is happen successfully")
-                     print(f"You sold {sold_quantity} Quantities of {item_name} for the {user_name}")
+                     print(f"You sold {sold_quantity} Quantities of {item_name}")
                      print(f"The quantities left for {item_name} is {new_qty}")
                   else:
                       print(f"Insufficient stock only {current_quantity} of {inventory_dict[item_id]} are available")

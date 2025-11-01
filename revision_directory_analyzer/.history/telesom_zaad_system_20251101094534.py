@@ -32,14 +32,14 @@ else:
                    amount_of_money += user_amount
                    print(f"Waxaad dhigatay lacag dhan: ${user_amount}, waad mahadsantahay")
                 else:
-                   print(f"Hadhaagaagu waa: ${amount_of_money}")
+                   print(f"Hadhaagaagu waa: {amount_of_money}")
             
             case '2':
                 if amount_of_money == 0:
                    print("Ma diri kartid Lacag waayo lacag ma haysatid")
                 else:
                    receiver_number = int(input("Geli numberka aad u dirayso lacagta: "))
-                   amount_receiving = float(input("Geli xaddiga lacagta aad u direyso: $ "))
+                   amount_receiving = float(input("Geli xaddiga lacagta aad u direyso $: "))
                    print(f"Waxaad u dirtey {receiver_number}, lacag dhan: ${amount_receiving}")
             
             case '3':
@@ -49,7 +49,7 @@ else:
                     branch_number = int(input("Geli numberka xarunta: "))
                     branch_name = input("Geli magaca xarunta: ")
                     amount_pocket = float(input("Geli xaddiga lacagta aad la baxayso: "))
-                    print(f"Waxaad kala baxday laanta {branch_name}, lacag dhan: ${amount_pocket}")
+                    print(f"Waxaad kala baxday laanta {branch_name}, lacag dhan: {amount_pocket}")
             
             case '4':
                 if amount_of_money == 0:
@@ -57,17 +57,17 @@ else:
                 else:
                     merchant_number = int(input("Geli numberka ganacsiga: "))
                     amount_buying =  float(input("Geli xadiga lacagta aad wax ku iibsanayso: "))
-                    print(f"Waxaad wax kaga iibsatay ganacsiga: {merchant_number}, lacag dhan: ${amount_buying}")
+                    print(f"Waxaad wax kaga iibsatay ganacsiga: {merchant_number}, lacag dhan: {amount_buying}")
             
             case '5':
                 if amount_of_money == 0:
                     print("Maad samayn wax dhaqdhaqaaq ah")
                 else:
-                    new_amount = (user_amount - amount_buying - amount_pocket - amount_receiving) 
-                    print(f"Hadhaagaaga cusubi waa lacag dhan: ${new_amount}")
-                    print(f"Waxaad wax ku iibsatay lacag dhan: ${amount_buying}")
-                    print(f"Waxaad la baxday lacag dhan: ${amount_pocket}")
-                    print(f"Waxaad dirtay lacag dhan: ${amount_receiving}")
+                    new_amount = user_amount - amount_buying 
+                    print(f"Waxaad haysataa lacag dhan: {new_amount}")
+                    print(f"Waxaad wax ku iibsatay lacag dhan: {amount_buying}")
+                    print(f"Waxaad la baxday lacag dhan: {amount_pocket}")
+                    print(f"Waxaad dirtay lacag dhan: {amount_receiving}")
             case _:
                     print("Invalid option")
     else:

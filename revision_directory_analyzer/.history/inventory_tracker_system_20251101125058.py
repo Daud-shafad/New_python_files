@@ -42,16 +42,16 @@ while True:
               user_name = input("Enter Your name: ")
               user_phone = input("Enter Your phone number: ")
               print(inventory_dict)
-              item_id = int(input("Enter the ID of the item you want: "))
               if item_id in inventory_dict:
                   current_quantity = inventory_dict[item_id][1]
+                  item_id = int(input("Enter the ID of the item you want: "))
                   item_name = input("Enter the name of the item you want: ")
                   sold_quantity = int(input("Enter the Quantity you want: "))
                   if sold_quantity <= current_quantity: 
                      new_qty = current_quantity - sold_quantity
                      inventory_dict[item_id][1] = new_qty
                      print("Sale is happen successfully")
-                     print(f"You sold {sold_quantity} Quantities of {item_name} for the {user_name}")
+                     print(f"You sold {sold_quantity} Quantities of {item_name}")
                      print(f"The quantities left for {item_name} is {new_qty}")
                   else:
                       print(f"Insufficient stock only {current_quantity} of {inventory_dict[item_id]} are available")

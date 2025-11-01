@@ -32,14 +32,14 @@ else:
                    amount_of_money += user_amount
                    print(f"Waxaad dhigatay lacag dhan: ${user_amount}, waad mahadsantahay")
                 else:
-                   print(f"Hadhaagaagu waa: ${amount_of_money}")
+                   print(f"Hadhaagaagu waa: {amount_of_money}")
             
             case '2':
                 if amount_of_money == 0:
                    print("Ma diri kartid Lacag waayo lacag ma haysatid")
                 else:
                    receiver_number = int(input("Geli numberka aad u dirayso lacagta: "))
-                   amount_receiving = float(input("Geli xaddiga lacagta aad u direyso: $ "))
+                   amount_receiving = float(input("Geli xaddiga lacagta aad u direyso $: "))
                    print(f"Waxaad u dirtey {receiver_number}, lacag dhan: ${amount_receiving}")
             
             case '3':
