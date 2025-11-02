@@ -40,7 +40,7 @@ while True:
                 user_input = input("Enter a text: ").lower()
                 vowels = ['a', 'e', 'i', 'o', 'u']
                 if any(vowel in user_input for vowel in vowels):
-                    total_vowels = sum(user_input.count(vowel) for vowel in vowels)
+                    total_vowels = sum(user_input.count(vowels) for vowel in vowels)
                     found_vowels_set = {vowel for vowel in vowels if vowel in user_input}
                     print(f"Your vowels in the text are: {sorted(list(found_vowels_set))}")
                     print(f"You have a total of vowels: {total_vowels}")
@@ -51,7 +51,7 @@ while True:
                 user_input = input("Enter a text: ").lower()
                 my_vowels = 'aeiou'
                 unique_consonants_set = {char for char in user_input if char.isalpha() and char not in my_vowels}
-                total_consonants = sum(1 for char in user_input if char.isalpha() and char not in my_vowels)
+                total_consonants = sum(1 for char in user_input if char.isalpha and char not in my_vowels)
                 if unique_consonants_set:
                     print(f"Your consonants in the text are: {sorted(list(unique_consonants_set))}")
                     print(f"You have a total of consonants: {total_consonants}")

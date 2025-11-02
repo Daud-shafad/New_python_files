@@ -37,26 +37,25 @@ while True:
                  print(f"Total unique words: {unique_word_count}")
                  
             case '3':
-                user_input = input("Enter a text: ").lower()
-                vowels = ['a', 'e', 'i', 'o', 'u']
-                if any(vowel in user_input for vowel in vowels):
-                    total_vowels = sum(user_input.count(vowel) for vowel in vowels)
-                    found_vowels_set = {vowel for vowel in vowels if vowel in user_input}
-                    print(f"Your vowels in the text are: {sorted(list(found_vowels_set))}")
-                    print(f"You have a total of vowels: {total_vowels}")
-                else:
-                    print("You have no vowels in Your text")
-                    
+                 user_input = input("Enter a text: ").lower()
+                 vowels = ['a', 'e', 'i', 'o', 'u']
+                 if vowels[0] or vowels[1] or vowels[2] or vowels[3] or vowels[4] in user_input:
+                    total_vowels = len(vowels in user_input)
+                    print(f"Your vowels in the text are: {vowels})")
+                    print(f"You have a total vowels of: {total_vowels}")
+                 else:
+                    print("You have no Vowels in Your Text")
+            
             case '4':
-                user_input = input("Enter a text: ").lower()
-                my_vowels = 'aeiou'
-                unique_consonants_set = {char for char in user_input if char.isalpha() and char not in my_vowels}
-                total_consonants = sum(1 for char in user_input if char.isalpha() and char not in my_vowels)
-                if unique_consonants_set:
-                    print(f"Your consonants in the text are: {sorted(list(unique_consonants_set))}")
-                    print(f"You have a total of consonants: {total_consonants}")
-                else:
-                    print("You have no consonants in your text")
+                 user_input = input("Enter a text: ").lower()
+                 consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'n',
+                               'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']
+                 if consonants[0] or consonants[1] or consonants[2] or consonants[3] or  consonants[4] or consonants[5] or consonants[6] or consonants[7] or consonants[8] or consonants[9] or consonants[10] or consonants[11] or consonants[12] or consonants[13] or consonants[14] or consonants[15] or consonants[16] or consonants[17] or consonants[18] or consonants[19]:
+                    total_consonants = len(user_input(consonants))
+                    print(f"Your consonants in the text are: {user_input(consonants)}")
+                    print(f"You have a total vowels of: {total_consonants}")
+                 else:
+                    print("You have no consonants in Your Text")
             case _:
                     print("Invalid option, Try again")
                     

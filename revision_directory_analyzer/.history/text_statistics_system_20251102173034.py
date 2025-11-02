@@ -40,7 +40,7 @@ while True:
                 user_input = input("Enter a text: ").lower()
                 vowels = ['a', 'e', 'i', 'o', 'u']
                 if any(vowel in user_input for vowel in vowels):
-                    total_vowels = sum(user_input.count(vowel) for vowel in vowels)
+                    total_vowels = sum(user_input.count(vowels) for vowel in vowels)
                     found_vowels_set = {vowel for vowel in vowels if vowel in user_input}
                     print(f"Your vowels in the text are: {sorted(list(found_vowels_set))}")
                     print(f"You have a total of vowels: {total_vowels}")
