@@ -25,7 +25,7 @@ while True:
       print("You lose")
   elif user_number == random_number:
       user_track_attempts.append(user_number)
-      print("You got it man Thanks")
+      print("You got it, You win")
       attempts = attempts + 1
       print("Congratulations, You win")
       print(f"All your attempts are: {user_track_attempts}")

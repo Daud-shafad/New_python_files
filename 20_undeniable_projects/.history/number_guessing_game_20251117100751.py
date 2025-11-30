@@ -9,28 +9,19 @@
 import random
 random_number = random.randrange(1,100)
 user_track_attempts = []
-attempts = 0
 
 while True:
   user_number = int(input("Enter a number: "))
   if user_number > random_number:
       user_track_attempts.append(user_number)
       print("Higher guessing")
-      attempts = attempts + 1
-      print("You lose")
   elif user_number < random_number:
       user_track_attempts.append(user_number)
-      print("Lower guessing")
-      attempts = attempts + 1
-      print("You lose")
+      print("Lower guessing") 
   elif user_number == random_number:
-      user_track_attempts.append(user_number)
-      print("You got it man Thanks")
-      attempts = attempts + 1
-      print("Congratulations, You win")
-      print(f"All your attempts are: {user_track_attempts}")
-      print(f"You got it the answer the {attempts} attempt!")
-      break
+     user_track_attempts.append(user_number)
+     
+     print("You got it, You win")
   else:
      print("Invalid input")
      

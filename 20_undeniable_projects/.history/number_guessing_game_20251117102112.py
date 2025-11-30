@@ -17,17 +17,15 @@ while True:
       user_track_attempts.append(user_number)
       print("Higher guessing")
       attempts = attempts + 1
-      print("You lose")
   elif user_number < random_number:
       user_track_attempts.append(user_number)
       print("Lower guessing")
-      attempts = attempts + 1
-      print("You lose")
+      attempts = attempts + 1 
   elif user_number == random_number:
       user_track_attempts.append(user_number)
-      print("You got it man Thanks")
+      print("You got it, You win")
       attempts = attempts + 1
-      print("Congratulations, You win")
+     
       print(f"All your attempts are: {user_track_attempts}")
       print(f"You got it the answer the {attempts} attempt!")
       break

@@ -9,7 +9,7 @@
 
 while True:
     print("\n------Available menu options:------")
-    print("1. Even/Odd")
+    print("1.Even/Odd")
     print("2. Prime/Composite")
     print("3. Positive/Negative")
     print("4. Exit")

@@ -104,7 +104,7 @@ while True:
                    print(f"Your item is: {user_item}")
                    print(f"Your payment method is: {user_payment}")
                    total = available_item_pricing[user_item]
-                   print(f"You Payout a total of: {total}")
+                   print(f"You Payout a total of: {total:.2f}")
             
             case _:
                 print("Invalid option, Try again")        

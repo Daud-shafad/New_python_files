@@ -1,2 +1,0 @@
-# simple menu-driven calculator
-

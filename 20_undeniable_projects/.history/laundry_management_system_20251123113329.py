@@ -37,7 +37,7 @@ while True:
                 user_phone = input("Enter Your phone: ")
                 user_item = input("Enter Your item: ")
                 if user_name not in customers_management_dict:
-                   customers_management_dict[user_name] = [user_phone, {user_item}]
+                   customers_management_dict[user_name] = [user_phone, (user_item)]
                    print(customers_management_dict)
                    print(f"You added {user_name} Successfully")
                 elif user_name in customers_management_dict:
@@ -104,7 +104,7 @@ while True:
                    print(f"Your item is: {user_item}")
                    print(f"Your payment method is: {user_payment}")
                    total = available_item_pricing[user_item]
-                   print(f"You Payout a total of: {total}")
+                   print(f"You Payout a total of: ${total:.2f}")
             
             case _:
                 print("Invalid option, Try again")        

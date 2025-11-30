@@ -6,7 +6,7 @@
 # So, Let's get started!
 
 order_creation_list = []
-available_item_pricing = {"shirt" : f"${2.3}", "trouser" : f"${3.1}", "coat" : f"${4.2}", "jacket" : f"${3.7}", "t-shirt, socks & pants" : f"${1.2}"}
+available_item_pricing = {"shirts" : f"${2.3}", "trousers" : f"${3.1}", "coats" : f"${4.2}", "jackets" : f"${3.7}", "t-shirt, socks & pants" : f"${1.2}"}
 customers_management_dict = {}
 
 while True:
@@ -27,7 +27,7 @@ while True:
         match user_choice:
             
             case '1':
-                print("available item orders & their price: ", available_item_pricing)
+                print("available items & their price: ", available_item_pricing)
                 user_order = input("Enter Your order(wash OR dry cleaning): ")
                 order_creation_list.append(user_order)
                 print(f"You make a Laundry order of {user_order}, have a patience")
@@ -35,15 +35,14 @@ while True:
             case '2':
                 user_name = input("Enter Your name: ")
                 user_phone = input("Enter Your phone: ")
-                user_item = input("Enter Your item: ")
+                user_items = input("Enter Your items: ")
                 if user_name not in customers_management_dict:
-                   customers_management_dict[user_name] = [user_phone, {user_item}]
-                   print(customers_management_dict)
+                   customers_management_dict[user_name] = [user_phone, [user_items]]
                    print(f"You added {user_name} Successfully")
                 elif user_name in customers_management_dict:
                    user_name = input("Enter Your name: ")
                    customers_management_dict.get(user_name)
-                   print(f"You have this data: {customers_management_dict[user_name]}")
+                   print(f"You have this data")
                 else:
                    print("Customer name is not found")
             
@@ -60,9 +59,9 @@ while True:
             case '4':
                 user_name = input("Enter Your name: ")
                 user_phone = input("Enter Your phone: ")
-                user_item = input("Enter Your item: ")
-                if user_item in available_item_pricing:
-                   total = available_item_pricing[user_item]
+                user_items = input("Enter Your items: ")
+                if user_items in available_item_pricing:
+                   total = available_item_pricing[user_items]
                    print(f"You have a total of {total}")
                 else:
                    print("Item is not found")
@@ -101,13 +100,9 @@ while True:
                    print(f"Your order is: {user_order}")
                    print(f"Your name is: {user_name}")
                    print(f"Your phone is: {user_phone}")
-                   print(f"Your item is: {user_item}")
+                   print(f"Your items are: {user_items}")
                    print(f"Your payment method is: {user_payment}")
-                   total = available_item_pricing[user_item]
-                   print(f"You Payout a total of: {total}")
-            
-            case _:
-                print("Invalid option, Try again")        
-    else:
-        print("Invalid choice, Type (1-6)") 
+                   print(f"You Payout a total of: ${total:.2f}")
+                         
+                   
                 

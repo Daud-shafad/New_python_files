@@ -35,15 +35,14 @@ while True:
             case '2':
                 user_name = input("Enter Your name: ")
                 user_phone = input("Enter Your phone: ")
-                user_item = input("Enter Your item: ")
+                user_items = input("Enter Your items: ")
                 if user_name not in customers_management_dict:
-                   customers_management_dict[user_name] = [user_phone, {user_item}]
-                   print(customers_management_dict)
+                   customers_management_dict[user_name] = [user_phone, [user_items]]
                    print(f"You added {user_name} Successfully")
                 elif user_name in customers_management_dict:
                    user_name = input("Enter Your name: ")
                    customers_management_dict.get(user_name)
-                   print(f"You have this data: {customers_management_dict[user_name]}")
+                   print(f"You have this data")
                 else:
                    print("Customer name is not found")
             
@@ -60,9 +59,9 @@ while True:
             case '4':
                 user_name = input("Enter Your name: ")
                 user_phone = input("Enter Your phone: ")
-                user_item = input("Enter Your item: ")
-                if user_item in available_item_pricing:
-                   total = available_item_pricing[user_item]
+                user_items = input("Enter Your items: ")
+                if user_items in available_item_pricing:
+                   total = available_item_pricing[user_items]
                    print(f"You have a total of {total}")
                 else:
                    print("Item is not found")
@@ -101,10 +100,9 @@ while True:
                    print(f"Your order is: {user_order}")
                    print(f"Your name is: {user_name}")
                    print(f"Your phone is: {user_phone}")
-                   print(f"Your item is: {user_item}")
+                   print(f"Your items are: {user_items}")
                    print(f"Your payment method is: {user_payment}")
-                   total = available_item_pricing[user_item]
-                   print(f"You Payout a total of: {total}")
+                   print(f"You Payout a total of: ${total:.2f}")
             
             case _:
                 print("Invalid option, Try again")        
