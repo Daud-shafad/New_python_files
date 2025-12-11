@@ -75,4 +75,29 @@
 # No functions, no for loops!
 
 
+while True:
+    print("\n----------Available Library Menu Options----------")
+    print("1. Add New Book")
+    print("2. Register New Member")
+    print("3. Borrow A book")
+    print("4. Return Books")
+    print("5. Search books By Title, Author, or Genre")
+    print("6. View Borrowing Members History")
+    print("7. View All Books")
+    print("8. Exit The system")
+    
+    user_choice = input("Enter Your Choice: ")
+    if user_choice == '8':
+          print("Good Bye, You stopped the system, See You later!")
+          break
+      
+    elif user_choice == '1' or user_choice == '2' or user_choice == '3' or user_choice == '4' or user_choice == '5' or user_choice == '6' or user_choice == '7':
+        
+        match user_choice:
+            
+            case '1':
+                
+        
+    
+    
 
